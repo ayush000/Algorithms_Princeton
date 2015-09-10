@@ -46,6 +46,7 @@ public class UF {
         while (i!=id[i])
         {
             i=id[i];
+            id[i]=id[id[i]];
         }
         return i;
     }
@@ -85,7 +86,7 @@ public class UF {
 
         long startTime = System.nanoTime();
 
-        BufferedReader br = new BufferedReader(new FileReader(new File("large<UF.txt")));
+        BufferedReader br = new BufferedReader(new FileReader(new File("largeUF.txt")));
         int N=0;
         UF uf=null;
         try {
